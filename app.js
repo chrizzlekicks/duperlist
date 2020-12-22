@@ -20,6 +20,20 @@ function inputLength() {
     return input.value.length;
 }
 
+function addAfterCheckBtnValid() {
+    if (inputLength() > 0) {
+        addToDo();
+        resetInput();
+    }
+}
+
+function addAfterCheckInputValid(e) {
+    if (inputLength() > 0 && e.which === 13) {
+        addToDo();
+        resetInput();
+    } 
+}
+
 function clearList() {
     ul.innerHTML = "";
     localStorage.clear("Duperlist");
@@ -45,20 +59,6 @@ function addToDo() {
     var todo = input.value;
     createListItem(todo);
     addLocalStorage(todo);
-}
-
-function addAfterCheckBtnValid() {
-    if (inputLength() > 0) {
-        addToDo();
-        resetInput();
-    }
-}
-
-function addAfterCheckInputValid(e) {
-    if (inputLength() > 0 && e.which === 13) {
-        addToDo();
-        resetInput();
-    } 
 }
 
 function deleteItem(e) {
