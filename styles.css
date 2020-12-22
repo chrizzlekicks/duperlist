@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+*, 
+::before, 
+::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aliceblue;
+    font-family: 'Poppins', sans-serif;
+    color: #666;
+}
+
+.jumbotron {
+    padding: 2rem 2rem;
+    background-color: #333;
+    color: whitesmoke;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.done {
+    text-decoration: line-through;
+}
+
+.btn {
+    padding: 0 25px 0 25px;
+}
+
+.deleteBtn {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    border: 0;
+    background: transparent;
+}
+
+.material-icons {
+    color: #666;
+}
+
+.empty-list {
+    margin: 0 25% 0 25%;
+    width: 50%;
+    text-align: center;
+}
+
+.list-group-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.list-group-item:last-child {
+    margin-bottom: 2rem;
+}
+
