@@ -5,14 +5,14 @@ This list will be updated on a regular basis, with several new features added st
 
 Check the current status here: [Duperlist](https://chrizzlekicks.github.io/duperlist/duperlist.html)
 
-## Current Features
+### Current Features
 
 * Add and delete to-dos to list
 * Add and remove to-dos to local storage
 * Clear entire list and local storage by hitting 'Clear' button
 * Click list item to indicate that task is done
 
-## Features to Come
+### Features to Come
 
 * Search/filter tasks
 * Edit tasks
