@@ -73,7 +73,7 @@ function getLocalStorage() {
         todos = [];
     } else {
         todos = JSON.parse(ls);
-        todos.forEach(function(item) {
+        todos.forEach((item) => {
             createListItem(item);
         })
     }
@@ -86,10 +86,10 @@ function addLocalStorage(item) {
 
 function removeLocalStorage(item) {
     var itemValue = item.firstChild.textContent;
-    todos = todos.filter(function(element) {
-        if (itemValue != element) {
-            return element;            
-        }
-    });
+    todos = todos.filter((element) => {
+            if (itemValue != element) {
+                return element;
+            }
+        });
     localStorage.setItem("Duperlist", JSON.stringify(todos));
 }
