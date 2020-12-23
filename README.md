@@ -15,8 +15,8 @@ Check the current status here: [Duperlist](https://chrizzlekicks.github.io/duper
 ## Features to Come
 
 * Search/filter tasks
-* edit tasks
-* change the order of tasks 
+* Edit tasks
+* Change the order of tasks 
 
 The logic of the todolist app is entirely built with JavaScript, the design with Bootstrap. Clearly, the focus of this application was solely on the functionality, therefore additional input regarding new features but also design modifications are highly appreciated.
 
