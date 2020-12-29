@@ -1,9 +1,9 @@
 // Global Variables
-var enterBtn = document.getElementById("enter-btn");
-var clearBtn = document.getElementById("clear-btn");
-var input = document.getElementById("userinput");
-var ul = document.querySelector(".list-group");
-var todos = [];
+const enterBtn = document.querySelector(".enter-btn");
+const clearBtn = document.querySelector(".clear-btn");
+const ul = document.querySelector(".list-group");
+let input = document.getElementById("userinput");
+let todos = [];
 
 // Event Listeners
 enterBtn.addEventListener("click", addAfterCheckBtnValid);
@@ -40,13 +40,13 @@ function clearList() {
 }
 
 function createListItem(item) {
-    var li = document.createElement("li");
+    const li = document.createElement("li");
     li.className = "list-group-item";
     li.append(document.createTextNode(item));
     li.onclick = () => li.classList.toggle("done");
-    var btn = document.createElement("button");
+    const btn = document.createElement("button");
     btn.className = "deleteBtn";
-    var bin = document.createElement("i");
+    const bin = document.createElement("i");
     bin.className = "material-icons";
     bin.textContent = "delete";
     btn.append(bin);
@@ -56,26 +56,24 @@ function createListItem(item) {
 }
 
 function addToDo() {
-    var todo = input.value;
+    let todo = input.value;
     createListItem(todo);
     addLocalStorage(todo);
 }
 
 function deleteItem(e) {
-    var todo = e.currentTarget.parentElement;
+    let todo = e.currentTarget.parentElement;
     todo.remove();
     removeLocalStorage(todo);
 }
 
 function getLocalStorage() {
-    var ls = localStorage.getItem("Duperlist");
+    let ls = localStorage.getItem("Duperlist");
     if(!ls) {
         todos = [];
     } else {
         todos = JSON.parse(ls);
-        todos.forEach((item) => {
-            createListItem(item);
-        })
+        todos.forEach(item => createListItem(item))
     }
 }
 
@@ -85,11 +83,7 @@ function addLocalStorage(item) {
 }
 
 function removeLocalStorage(item) {
-    var itemValue = item.firstChild.textContent;
-    todos = todos.filter((element) => {
-            if(itemValue != element) {
-                return element;
-            }
-        });
+    let itemValue = item.firstChild.textContent;
+    todos = todos.filter(element => itemValue != element);
     localStorage.setItem("Duperlist", JSON.stringify(todos));
 }

@@ -55,3 +55,8 @@ body {
     margin-bottom: 2rem;
 }
 
+@media screen and (max-width: 767.9px) {
+    .btn {
+        padding: 0 10px 0 10px;
+    }
+}
